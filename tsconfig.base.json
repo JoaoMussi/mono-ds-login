@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@gota/design-system": ["dist/libs/design-system"],
+      "@gota/design-system/*": ["dist/libs/design-system/dist/components/*"],
+      "@gota/design-system/loader": ["dist/libs/design-system/loader"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
