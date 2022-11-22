@@ -1,0 +1,27 @@
+{
+  "name": "design-system-angular",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/design-system-angular/src",
+  "prefix": "gota",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/design-system-angular"],
+      "options": {
+        "jestConfig": "libs/design-system-angular/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/design-system-angular/**/*.ts",
+          "libs/design-system-angular/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

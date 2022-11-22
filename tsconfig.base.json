@@ -16,6 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@gota/design-system": ["dist/libs/design-system"],
+      "@gota/design-system-angular": [
+        "libs/design-system-angular/src/index.ts"
+      ],
+      "@gota/design-system-react": ["libs/design-system-react/src/index.ts"],
       "@gota/design-system/*": ["dist/libs/design-system/dist/components/*"],
       "@gota/design-system/loader": ["dist/libs/design-system/loader"]
     }
