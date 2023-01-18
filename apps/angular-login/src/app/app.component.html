@@ -1,2 +1,40 @@
-<!-- <router-outlet></router-outlet> -->
-<p>Angular-login works!</p>
+<g-window-background illustration="sky-beach">
+  <g-box center-content height="100vh">
+    <g-box
+      display="flex"
+      padding="md"
+      border-radius="xl"
+      height="450px"
+      width="900px"
+    >
+      <g-box
+        width="35%"
+        padding="md"
+        center-content
+        flex-direction="column"
+        background-color="--ds-primary-color-400"
+        linear-gradient="light-right"
+      >
+        <g-box width="100%" center-content flex-direction="column">
+          <g-heading type="h1">Bem-vindo!</g-heading>
+        </g-box>
+        <g-box height="80px"></g-box>
+
+        <g-text type="h1">Ainda não tem uma conta?</g-text>
+        <g-button label="Cadastre-se" kind="tertiary"></g-button>
+      </g-box>
+      <g-box
+        width="65%"
+        center-content
+        background-color="--ds-primary-color-400"
+        linear-gradient="light-left"
+      >
+        <g-box padding="md" width="70%">
+          <g-input id="email" type="email" label="Usuário / E-mail"></g-input>
+          <g-input id="password" type="password" label="Senha"></g-input>
+          <g-button label="Entrar" kind="primary"></g-button>
+        </g-box>
+      </g-box>
+    </g-box>
+  </g-box>
+</g-window-background>

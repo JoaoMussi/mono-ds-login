@@ -1,0 +1,18 @@
+.g-input {
+  margin-bottom: var(--ds-spacing-4);
+
+  &__field {
+    border: 0;
+    border-radius: var(--ds-border-radius-light);
+    box-sizing: border-box;
+    box-shadow: inset var(--ds-box-shadow-medium);
+    display: block;
+    margin-top: var(--ds-spacing-2);
+    padding: var(--ds-spacing-2);
+    width: 100%;
+  }
+
+  &__label {
+    font-size: var(--ds-font-size-md);
+  }
+}

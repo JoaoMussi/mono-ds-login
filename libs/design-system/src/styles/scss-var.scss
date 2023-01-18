@@ -1,0 +1,90 @@
+:root,
+:host {
+  --ds-font-size-default: 16px;
+  --ds-font-size-xxxl: 62px;
+  --ds-font-size-xxl: 48px;
+  --ds-font-size-xl: 32px;
+  --ds-font-size-lg: 24px;
+  --ds-font-size-sm: 14px;
+  --ds-font-size-xs: 12px;
+
+  --ds-font-weight-normal: normal;
+  --ds-font-weight-bold: bold;
+
+  --ds-line-height-default: 1;
+  --ds-line-height-medium: 1.5;
+
+  --ds-background-color: #5d99d3;
+
+  --ds-primary-color-50: rgb(224, 242, 255);
+  --ds-primary-color-100: rgb(179, 223, 255);
+  --ds-primary-color-200: rgb(128, 202, 255);
+  --ds-primary-color-300: rgb(77, 180, 255) ;
+  --ds-primary-color-400: rgb(38, 164, 255);
+  --ds-primary-color-500: rgb(0, 148, 255);
+  --ds-primary-color-600: rgb(0, 140, 255);
+  --ds-primary-color-700: rgb(0, 129, 255);
+  --ds-primary-color-800: rgb(0, 119, 255);
+  --ds-primary-color-900: rgb(0, 101, 255);
+  --ds-primary-color-A100: rgb(255, 255, 255);
+  --ds-primary-color-A200: rgb(242, 247, 255);
+  --ds-primary-color-A400: rgb(191, 213, 255);
+  --ds-primary-color-A700: rgb(166, 195, 255);
+
+  --ds-secondary-color: #e1eaf3;
+
+  --ds-color-medium: #5c84b6;
+  --ds-color-high: #2b89d0;
+
+  --ds-color-white: #ffffff;
+  --ds-color-black: #000000;
+
+  --ds-spacing-1: 4px;
+  --ds-spacing-2: 8px;
+  --ds-spacing-3: 12px;
+  --ds-spacing-4: 16px;
+  --ds-spacing-5: 20px;
+  --ds-spacing-6: 24px;
+  --ds-spacing-6: 28px;
+  --ds-spacing-7: 32px;
+  --ds-spacing-8: 40px;
+  --ds-spacing-9: 54px;
+  --ds-spacing-10: 58px;
+  --ds-spacing-11: 64px;
+
+  --ds-box-shadow-light: 1px 1px 6px 1px rgba(0, 0, 0, 0.25);
+  --ds-box-shadow-medium: 1px 1px 10px 1px rgba(0, 0, 0, 0.25);
+  --ds-box-shadow-dark: 1px 1px 14px 1px rgba(0, 0, 0, 0.25);
+
+  --ds-border-sm: 1px;
+  --ds-border-md: 2px;
+  --ds-border-lg: 4px;
+  --ds-border-xl: 8px;
+
+  --ds-border-radius-squared: 0;
+  --ds-border-radius-light: 4px;
+  --ds-border-radius-medium: 8px;
+  --ds-border-radius-high: 12px;
+  --ds-border-radius-circle: 50%;
+  --ds-border-radius-pill: 500px;
+
+  --ds-icon-size-sm: 16px;
+  --ds-icon-size-md: 24px;
+  --ds-icon-size-lg: 46px;
+
+  --ds-opacity-invisible: 0;
+  --ds-opacity-light: 0.1;
+  --ds-opacity-medium: 0.4;
+  --ds-opacity-high: 0.6;
+  --ds-opacity-oblique: 0.8;
+
+  --ds-font-default: 'Roboto, sans-serif';
+}
+
+body[data-theme='dark'] {
+  --ds-color-primary: #000c2a;
+  --ds-color-secondary: #001543;
+  --ds-color-default: #002167;
+  --ds-color-medium: #00103d;
+  --ds-color-high: #001237;
+}

@@ -6,6 +6,36 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface GBox {
+        "backgroundColor": string;
+        "borderRadius": string | Border;
+        "centerContent": boolean;
+        "display": string;
+        "flexDirection": 'column' | 'row';
+        "height": string;
+        "linearGradient": 'center' | 'light-left' | 'light-right';
+        "padding": string | Padding;
+        "width": string;
+    }
+    interface GButton {
+        "disabled": boolean;
+        "kind"?: 'primary' | 'secondary' | 'tertiary';
+        "label": string;
+    }
+    interface GHeading {
+        "type": 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    }
+    interface GInput {
+        "inputId": string;
+        "label": string;
+        "type": 'email' | 'password';
+    }
+    interface GText {
+        "value": string;
+    }
+    interface GWindowBackground {
+        "illustration": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -21,7 +51,47 @@ export namespace Components {
         "middle": string;
     }
 }
+export interface GInputCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGInputElement;
+}
 declare global {
+    interface HTMLGBoxElement extends Components.GBox, HTMLStencilElement {
+    }
+    var HTMLGBoxElement: {
+        prototype: HTMLGBoxElement;
+        new (): HTMLGBoxElement;
+    };
+    interface HTMLGButtonElement extends Components.GButton, HTMLStencilElement {
+    }
+    var HTMLGButtonElement: {
+        prototype: HTMLGButtonElement;
+        new (): HTMLGButtonElement;
+    };
+    interface HTMLGHeadingElement extends Components.GHeading, HTMLStencilElement {
+    }
+    var HTMLGHeadingElement: {
+        prototype: HTMLGHeadingElement;
+        new (): HTMLGHeadingElement;
+    };
+    interface HTMLGInputElement extends Components.GInput, HTMLStencilElement {
+    }
+    var HTMLGInputElement: {
+        prototype: HTMLGInputElement;
+        new (): HTMLGInputElement;
+    };
+    interface HTMLGTextElement extends Components.GText, HTMLStencilElement {
+    }
+    var HTMLGTextElement: {
+        prototype: HTMLGTextElement;
+        new (): HTMLGTextElement;
+    };
+    interface HTMLGWindowBackgroundElement extends Components.GWindowBackground, HTMLStencilElement {
+    }
+    var HTMLGWindowBackgroundElement: {
+        prototype: HTMLGWindowBackgroundElement;
+        new (): HTMLGWindowBackgroundElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +99,47 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "g-box": HTMLGBoxElement;
+        "g-button": HTMLGButtonElement;
+        "g-heading": HTMLGHeadingElement;
+        "g-input": HTMLGInputElement;
+        "g-text": HTMLGTextElement;
+        "g-window-background": HTMLGWindowBackgroundElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface GBox {
+        "backgroundColor"?: string;
+        "borderRadius"?: string | Border;
+        "centerContent"?: boolean;
+        "display"?: string;
+        "flexDirection"?: 'column' | 'row';
+        "height"?: string;
+        "linearGradient"?: 'center' | 'light-left' | 'light-right';
+        "padding"?: string | Padding;
+        "width"?: string;
+    }
+    interface GButton {
+        "disabled"?: boolean;
+        "kind"?: 'primary' | 'secondary' | 'tertiary';
+        "label"?: string;
+    }
+    interface GHeading {
+        "type"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    }
+    interface GInput {
+        "inputId"?: string;
+        "label"?: string;
+        "onValueChange"?: (event: GInputCustomEvent<any>) => void;
+        "type"?: 'email' | 'password';
+    }
+    interface GText {
+        "value"?: string;
+    }
+    interface GWindowBackground {
+        "illustration"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +155,12 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "g-box": GBox;
+        "g-button": GButton;
+        "g-heading": GHeading;
+        "g-input": GInput;
+        "g-text": GText;
+        "g-window-background": GWindowBackground;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +168,12 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "g-box": LocalJSX.GBox & JSXBase.HTMLAttributes<HTMLGBoxElement>;
+            "g-button": LocalJSX.GButton & JSXBase.HTMLAttributes<HTMLGButtonElement>;
+            "g-heading": LocalJSX.GHeading & JSXBase.HTMLAttributes<HTMLGHeadingElement>;
+            "g-input": LocalJSX.GInput & JSXBase.HTMLAttributes<HTMLGInputElement>;
+            "g-text": LocalJSX.GText & JSXBase.HTMLAttributes<HTMLGTextElement>;
+            "g-window-background": LocalJSX.GWindowBackground & JSXBase.HTMLAttributes<HTMLGWindowBackgroundElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

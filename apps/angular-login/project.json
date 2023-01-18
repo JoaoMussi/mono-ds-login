@@ -18,7 +18,7 @@
           "apps/angular-login/src/favicon.ico",
           "apps/angular-login/src/assets"
         ],
-        "styles": ["apps/angular-login/src/styles.css"],
+        "styles": ["apps/angular-login/src/styles.css", "libs/design-system/src/styles/scss-var.scss"],
         "scripts": []
       },
       "configurations": {

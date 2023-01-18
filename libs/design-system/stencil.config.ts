@@ -1,8 +1,8 @@
 import { Config } from '@stencil/core';
 
-import { sass } from '@stencil/sass';
-
 import { reactOutputTarget } from '@stencil/react-output-target';
+import path from 'path';
+import { sass } from '@stencil/sass';
 
 const angularValueAccessorBindings: ValueAccessorConfig[] = [];
 
@@ -13,12 +13,10 @@ import {
 
 export const config: Config = {
   namespace: 'design-system',
-  taskQueue: 'async',
-  plugins: [sass()],
+  globalStyle: 'src/styles/scss-var.scss',
   outputTargets: [
     {
       type: 'dist',
-      esmLoaderPath: '../loader',
     },
     {
       type: 'dist-custom-elements',
@@ -29,15 +27,13 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, // disable service workers
+      copy: [{ src: './statics/assets', dest: 'assets' }],
     },
-
     reactOutputTarget({
       componentCorePackage: '@gota/design-system',
       proxiesFile:
         '../../../libs/design-system-react/src/generated/components.ts',
-      includeDefineCustomElements: true,
     }),
-
     angularOutputTarget({
       componentCorePackage: '@gota/design-system',
       directivesProxyFile:
@@ -47,4 +43,12 @@ export const config: Config = {
       valueAccessorConfigs: angularValueAccessorBindings,
     }),
   ],
+  plugins: [
+    sass({
+      includePaths: [
+        path.resolve(__dirname, '../../../node_modules'),
+        path.resolve(__dirname, './src/styles')
+      ]
+    })
+  ]
 };

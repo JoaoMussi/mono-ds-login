@@ -1,0 +1,22 @@
+.g-button {
+  border: 0px;
+  border-radius: var(--ds-border-radius-light);
+  box-shadow: inset var(--ds-box-shadow-medium);
+  cursor: pointer;
+  padding: var(--ds-spacing-2) var(--ds-spacing-4);
+  width: 100%;
+
+  &--primary {
+    background-color: var(--ds-primary-color-500);
+  }
+
+  &--secondary {
+    background-color: var(--ds-secondary-color);
+  }
+  
+  &--tertiary {
+    background-color: rgb(0, 0, 0, var(--ds-opacity-invisible));
+    border: var(--ds-border-md) solid var(--ds-color-black);
+    box-shadow: unset;
+  }
+}
